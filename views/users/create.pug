@@ -1,0 +1,13 @@
+extends ../layouts/common.pug
+block content
+    body
+        h1 Create User
+        //- img(src="/images/fever.png")
+        form(action="/users/create" ,method="POST")
+            .form-group
+                label(for="name") Name
+                input#name.form-control(name="name", type="text", class="form-control")
+            .form-group    
+                label(for="phone") Phone
+                input#phone.form-control(name="phone",type="text", class="form-control")
+            button.btn-btn-primary Create
